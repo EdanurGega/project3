@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+  This is a new CloudFormation template.
+
+Resources:
+  eda:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0230bd60aa48260c6
+      InstanceType: t2.micro
+      KeyName: firstkey
+      SecurityGroups: 
+        - !Ref newSec
+      Tags: 
+        - Key: Name 
+          Value: eda-instance
+
+  newSec:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allows only SSH connection
+      SecurityGroupIngress: 
+        - IpProtocol: tcp 
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
