@@ -49,13 +49,14 @@ Resources:
       InstanceType: t2.micro
       KeyName: firstkey
       UserData:
-        Fn::Base64: |
+        Fn::Base64: !Sub |
           #!/bin/bash
           yum update -y
           yum install -y httpd
           systemctl start httpd
           systemctl enable httpd
           yum install -y wget
+          cd /var/www/html
           wget https://raw.githubusercontent.com/EdanurGega/project3/main/static-web/index.html
           wget https://raw.githubusercontent.com/EdanurGega/project3/main/static-web/cat0.jpg
           wget https://raw.githubusercontent.com/EdanurGega/project3/main/static-web/cat1.jpg
@@ -80,3 +81,4 @@ Resources:
           FromPort: 22
           ToPort: 22
           CidrIp: 0.0.0.0/0
+
