@@ -56,7 +56,7 @@ Resources:
           systemctl start httpd
           systemctl enable httpd
           yum install -y wget
-          wget -O /var/www/html/static-web/eda-instance.html https://github.com/EdanurGega/project3/raw/main/static-web/eda-instance.html
+          wget -O /var/www/html/static-web/eda-instance.html https://github.com/EdanurGega/project3/raw/main/static-web/index.html
           wget -O /var/www/html/static-web/cat0.jpg https://github.com/EdanurGega/project3/raw/main/static-web/cat0.jpg
           wget -O /var/www/html/static-web/cat1.jpg https://github.com/EdanurGega/project3/raw/main/static-web/cat1.jpg
           wget -O /var/www/html/static-web/cat2.jpg https://github.com/EdanurGega/project3/raw/main/static-web/cat2.jpg
