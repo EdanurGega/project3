@@ -57,9 +57,10 @@ Resources:
           systemctl enable httpd
           yum install -y wget
           wget https://raw.githubusercontent.com/EdanurGega/project3/main/static-web/index.html
-          wget https://github.com/EdanurGega/project3/blob/main/static-web/cat0.jpg
-          wget https://github.com/EdanurGega/project3/blob/main/static-web/cat1.jpg?raw=true
-          wget https://github.com/EdanurGega/project3/blob/main/static-web/cat2.jpg?raw=true
+          wget https://raw.githubusercontent.com/EdanurGega/project3/main/static-web/cat0.jpg
+          wget https://raw.githubusercontent.com/EdanurGega/project3/main/static-web/cat1.jpg
+          wget https://raw.githubusercontent.com/EdanurGega/project3/main/static-web/cat2.jpg
+
       SecurityGroupIds:
         - !Ref newSec
       Tags:
